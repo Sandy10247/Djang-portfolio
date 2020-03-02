@@ -1,0 +1,12 @@
+{% extends 'portfolio/base.html' %} {% block content %} {% load static %}
+<img
+	src="{% static 'portfolio/wp1886251.jpg' %}"
+	height="500px"
+	width="500px"
+/>
+<a href="{% url 'blog:home' %}">Blogs</a>
+<a href="{% static 'portfolio/secure-design-daniel-deogun.pdf' %}">Book</a>
+<h1>Home</h1>
+{% for item in projects %}
+<h2>{{item.title}}</h2>
+{% endfor %} {% endblock %}
